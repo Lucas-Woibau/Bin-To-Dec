@@ -1,6 +1,7 @@
 let numBinario = "";
+let saida = "";
 
 function Converter(){
     numBinario = document.getElementById('numBin').value;
-    window.alert(numBinario);
+    saida = document.getElementById('numDec').value = numBinario;
 }
