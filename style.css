@@ -22,7 +22,7 @@ input{
     font-size: large;
 }
 
-input::-webkit-inner-spin-button{
+::-webkit-inner-spin-button{
     appearance: none;
 }
 
