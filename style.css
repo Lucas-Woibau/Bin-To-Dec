@@ -20,7 +20,10 @@ body{
 input{
     height: 30px;
     font-size: large;
-    
+}
+
+input::-webkit-inner-spin-button{
+    appearance: none;
 }
 
 button{
