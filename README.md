@@ -1,5 +1,7 @@
 # Bin2Dec
 
+<img src="https://github.com/Lucas-Woibau/Bin2Dec/blob/master/public/Tela%20Inicial.png?raw=true">
+
 ## Conversor de Número Binário para Número Decimal
 
 ## Tecnologias usadas:
