@@ -1,7 +1,7 @@
-let numBin = '';
+let numBin = document.getElementById('numBin');
 let saida = '';
 
-function Converter(){
+numBin.addEventListener('input',() => {
     numBin = document.getElementById('numBin').value;
     const numBinStr = numBin.toString()       
 
@@ -27,10 +27,14 @@ function Converter(){
     
     saida = document.getElementById('numDec').value = somaFinalNumberDec;
     
-}
+});
 
 function ExibirAlerta(){
-    alert("Digite apenas 0s e 1s!")
+    const error = document.getElementById('erro')
+    error.innerHTML = `<small>Favor digitar apenas 1s e 0s</small>`;
+    setTimeout(() =>{
+        error.innerHTML = ``;
+    }, 3000)
 }
 
 function CopiarTexto(){
@@ -39,7 +43,14 @@ function CopiarTexto(){
     navigator.clipboard.writeText(saida.valueOf())
 
     .then(() => {
-        alert("Texto copiado para área de transferência!")
+        input.textContent = "COPIADO"
+        input.style.cursor = "default"    
+        input.style.backgroundColor = "rgb(108, 235, 161)";
+        setTimeout(() =>{
+            input.textContent = "COPIAR"
+            input.style.cursor = "pointer"
+            input.style.backgroundColor = "aqua";
+        }, 2000);
     })
     .catch((error) =>{
         console.error("Erro ao copiar o texto: ",error)
